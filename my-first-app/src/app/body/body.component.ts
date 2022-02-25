@@ -16,6 +16,8 @@ export class BodyComponent implements OnInit {
 num=4;
 link="/assets/images/image15.png"
 data={a:1,b:2};
+n="";
+sai="";
 
 }
 
