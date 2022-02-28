@@ -3,3 +3,15 @@
 <p>{{recived}}</p>
 
 <input type="text" placeholder={{this.co.sendvalue}}>
+<table border="2">
+    <tr>
+        <th>name</th>
+        <th>email</th>
+        <th>password</th>
+    </tr>
+    <tr *ngFor="let a of this.co.formdata">
+     <td>{{a.name}}</td>
+     <td>{{a.email}}</td>
+     <td>{{a.password}}</td>
+    </tr>
+</table>

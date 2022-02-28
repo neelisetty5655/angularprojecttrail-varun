@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class InformationService {
 
   constructor() { }
-  data=[
+  data = [
     {
       "id": 1,
       "name": "Leanne Graham",
@@ -239,9 +239,13 @@ export class InformationService {
     }
   ]
 
-sendvalue:any;
-form(value:any){
-this.sendvalue=value;
-return this.sendvalue;
-}
+  sendvalue: any;
+  form(value: any) {
+    this.sendvalue = value;
+    return this.sendvalue;
+  }
+  formdata: any;
+  display_form_data(value: any) {
+    this.formdata = value;
+  }
 }
