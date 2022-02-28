@@ -39,3 +39,10 @@ border-radius: 3px;
  margin: 5px 0px 0px 150px;
  padding: 5px;
 }
+.hotel{
+    border: 1px solid black;
+    padding: 30px;
+}
+.hotel table,th,td{
+    border: 1px solid black;
+}

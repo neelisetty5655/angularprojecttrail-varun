@@ -385,15 +385,17 @@ export class AppComponent {
     "name": "",
     "email": "",
     "password": ""
-  }
+  };
+  l=0;
   array: any[] = [];
-  submitform(formdata: any) {
+  submitform(formdata:any) {
     this.user["name"]= formdata.name;
     this.user["email"] = formdata.email;
     this.user["password"] = formdata.password;
-    this.array.push(this.user)
+    this.array[this.l]=this.user;
+    this.l++;
     console.warn(this.array);
-    return this.d.display_form_data(this.array);
+    return this.d.display_form_data(this.user);
   }
 
 
@@ -410,4 +412,59 @@ for(this.k=1;this.k<=10;this.k++)
 }
  }  
  
+//hotel
+fy=0;
+fm=0;
+fd=0;
+ty=0;
+tm=0;
+td=0;
+ansy=0;
+ansm=0;
+ansd=0;
+ans=0;
+money=0;
+cost(from:any,to:any)
+{
+  this.fy=parseInt(from[0]+from[1]+from[2]+from[3]);
+  this.fm=parseInt(from[5]+from[6]);
+  this.fd=parseInt(from[8]+from[9])
+  this.ty=parseInt(to[0]+to[1]+[2]+to[3]);
+  this.tm=parseInt(to[5]+to[6]);
+  this.td=parseInt(to[8]+to[9])
+
+if(this.td>this.fd)
+{
+  this.ansd=this.td-this.fd;
 }
+  else if(this.td<this.fd){
+    this.tm--;
+    this.td=this.td+30;
+    this.ansd=this.td-this.fd;
+  }
+  if(this.tm>this.fd)
+  {
+    this.ansm=this.tm-this.fm;
+  }
+  else if(this.tm<this.fm){
+    this.ty--;
+    this.tm=this.tm+12;
+    this.ansm=this.tm-this.fm;
+  }
+  if(this.ty>this.fy)
+  {
+    this.ansy=this.ty-this.fy;
+  }
+this.ans=this.ansy*365+this.ansm*30+this.ansd;
+this.money=this.ans*400;
+console.log(this.ansd)
+console.log(this.ansy);
+console.log(this.ansm);
+console.log(this.ans);
+console.log(this.money);
+}
+
+}
+
+
+

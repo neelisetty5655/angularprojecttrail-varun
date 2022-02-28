@@ -132,3 +132,25 @@
 <p *ngFor="let a of arr">
 {{a}}
 </p>
+
+
+
+<!-- hotel booking -->
+
+<div class="hotel">
+    <label for="from">from</label>
+    <input type="date" id="from" #from>
+    <label for="to">to</label>
+    <input type="date" id="to" #to> 
+    <button (click)="cost(from.value,to.value)">calculate</button>
+    <!-- <table>
+        <tr>
+            <th>no.of.days</th>
+           <th>total cost per day(RS400/-)</th>
+        </tr>
+        <tr>
+            <td>{{ans}}</td>
+            <td>{{money}}</td>
+        </tr>
+    </table> -->
+</div>
