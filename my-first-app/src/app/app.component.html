@@ -71,5 +71,27 @@
         <button (click)="apples()">add to cart</button>
     </div>
 </div>
+<table border="2">
+<tr>
+    <th>id</th>
+    <th>name</th>
+    <th>username</th>
+    
+    <th>phone</th>
+    <th>wesite</th>
+  
+</tr>
+<tr *ngFor="let a of info">
+<td>{{a.id}}</td>
+<td>{{a.name}}</td>
+<td>{{a.username}}</td>
+<td>{{a.email}}</td>
 
+<td>{{a.phone}}</td>
+<td>{{a.website}}</td>
 
+</tr>
+</table>
+
+<input type="text" #parent (keyup)="send(parent.value)">
+<app-header></app-header>

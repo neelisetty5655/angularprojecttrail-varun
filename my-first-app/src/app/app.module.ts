@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { CartComponent } from './cart/cart.component';
-
+import {DatetimeService} from  '././datetime.service';
+import { InformationService } from '././information.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,7 @@ import { CartComponent } from './cart/cart.component';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [DatetimeService,InformationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

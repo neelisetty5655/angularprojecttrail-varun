@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+//import { format } from 'path';
 import { reduce, withLatestFrom } from 'rxjs';
-
+import { DatetimeService } from './datetime.service';
+import { InformationService } from './information.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -369,4 +371,21 @@ apples(){
   this.aq1=(this.aq).toString();
 }
 //c="apple";
+// constructor(private dt :DatetimeService)
+// {
+  
+// }
+// getdate=this.dt.today;
+// studentinfo=this.dt.getinformation;
+constructor(public d:InformationService){
+
+}
+info=this.d.data;
+
+parentdata=""
+send(value:any){
+ this.parentdata=value;
+ return this.d.form(this.parentdata);
+ 
+}
 }

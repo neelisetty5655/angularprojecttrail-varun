@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { InformationService } from '../information.service';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public co:InformationService) { }
 
   ngOnInit(): void {
   }
-
 @Input() recived:any;
+
 }
