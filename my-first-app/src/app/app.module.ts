@@ -9,17 +9,23 @@ import { BodyComponent } from './body/body.component';
 import { CartComponent } from './cart/cart.component';
 import {DatetimeService} from  '././datetime.service';
 import { InformationService } from '././information.service';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveAddressFormComponent } from './reactive-address-form/reactive-address-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    CartComponent
+    CartComponent,
+    ReactiveformComponent,
+    ReactiveAddressFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [DatetimeService,InformationService],
   bootstrap: [AppComponent]
