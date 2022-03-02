@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { InformationService } from '././information.service';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ReactiveAddressFormComponent } from './reactive-address-form/reactive-address-form.component';
+import { HttpDataRequestService } from './http-data-request.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,15 +22,17 @@ import { ReactiveAddressFormComponent } from './reactive-address-form/reactive-a
     BodyComponent,
     CartComponent,
     ReactiveformComponent,
-    ReactiveAddressFormComponent
+    ReactiveAddressFormComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [DatetimeService,InformationService],
+  providers: [DatetimeService,InformationService,HttpDataRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

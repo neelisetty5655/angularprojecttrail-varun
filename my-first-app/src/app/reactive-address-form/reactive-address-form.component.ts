@@ -31,6 +31,7 @@ myform:any;
   day2:any;
  Difference_In_Time:any;
  Difference_In_Days:any;
+ money:any;
   onsubmit(formvalue:any)
   {
     console.log(formvalue.value.email);
@@ -47,6 +48,7 @@ myform:any;
     this.Difference_In_Time = this.day2.getTime() - this.day1.getTime();
     this.Difference_In_Days = this.Difference_In_Time / (1000 * 3600 * 24);
     console.log(this.Difference_In_Days);
+    this.money=this.Difference_In_Days*400;
   }
 
 }

@@ -1,158 +1,27 @@
-<!-- <p>this is from root app</p>
-<button (click)="add()">click</button>
+<div class="container">
+    <h1>observable</h1>
+    <form>
+        <div class="form-group">
+            <label for="id">id:</label>
+            <input type="number" id="id"  class="form-control" name="id" [(ngModel)]="id">
 
-<p>{{count}}</p>
-
-
-<input type="number" [(ngModel)]="number">
-
-<div *ngIf="even()"><p>even</p></div>
-
-<p>{{fname}}</p>
-<app-header [recived]="item"></app-header>
-
-<app-body></app-body> -->
-
-<!-- <div class="container">
-<p [ngClass]="num>10?'red':'yellow'">{{num}}</p>
-<p [ngClass]="classfeatures()">{{num}}</p>
-<p [ngClass]="num==-1?'disable':'visible'">hi hello</p>
-<button (click)="disable()">click for disable</button>
-<button (click)="visible()">click for visible</button>
-<button [ngStyle]="{background:'yellow'}">click:</button>
-<button [ngStyle]="appendstyle">click</button>
-<button (click)="display()">click</button>
-<table class="tab">
-
-</table> -->
-<app-cart  [riceprice]="ri" [sugarprice]="su" [appleprice]="app" [riceq]="rq1" [sugarq]="sq1" [appleq]="aq1"></app-cart>
-<!-- </div> -->
-<div class="product"> 
-    <!-- <ul>
-        <li><ul>
+        </div>
+        <div class="form-group">
+            <label for="lname">last name:</label>
+            <input type="text"  id="lname" class="form-control" name="lname" [(ngModel)]="lname">
+        </div>
+        <div class="form-group">
+            <label for="fname">firstname:</label>
+            <input type="text"  id="fname" class="form-control" name="fname" [(ngModel)]="fname">
+        </div>
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="email" id="email" class="form-control" name="email" [(ngModel)]="email">
+        </div><br>
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" (click)="onsubmit()">
             
-            <li>id:1</li>
-            <li>product:rice</li>
-            <li>quantity:1kg</li>
-            <li>price:1200</li>
-            <button (click)="rice()">add to cart</button>
-        </ul>
-    </li>
-        <li>
-            <ul>
-                <li>id:2</li>
-                <li>product:sugar</li>
-                <li>quantity:1kg</li>
-                <li>price:100</li>
-                <button (click)="sugar()">add to cart</button>
-            </ul>
-        </li>
-        <li>
-            <ul>
-                <li>id:3</li>
-                <li>product:apples</li>
-                <li>quantity:1k</li>
-                <li>price:300</li>
-                <button (click)="apples()">add to cart</button>
-            </ul>
-        </li>
-        
-    </ul> -->
-    <div class="rice">
-    <img src="/assets/images/rice.png" alt="rice"><br>
-    <button (click)="rice()">add to cart</button>
-    </div>
-    <div class="sugar">
-<img src="/assets/images/sugar.png" alt="sugar"><br>
-<button (click)="sugar()">add to cart</button>
-    </div>
-    <div class="wheat">
-        <img src="/assets/images/wheat.png" alt="wheat"><br>
-        <button (click)="apples()">add to cart</button>
-    </div>
-</div>
-<table border="2">
-<tr>
-    <th>id</th>
-    <th>name</th>
-    <th>username</th>
-    
-    <th>phone</th>
-    <th>wesite</th>
-  
-</tr>
-<tr *ngFor="let a of info">
-<td>{{a.id}}</td>
-<td>{{a.name}}</td>
-<td>{{a.username}}</td>
-<td>{{a.email}}</td>
-
-<td>{{a.phone}}</td>
-<td>{{a.website}}</td>
-
-</tr>
-</table>
-
-<input type="text" #parent (keyup)="send(parent.value)">
-
-
-<p> day8 task 3</p>
-
-<div>
-    <form #formdata="ngForm" (ngSubmit)="submitform(formdata.value)">
-        <div class="mb-3 mt-3">
-            <label for="username" class="form-label">username</label>
-            <input type="text" class="form-control" id="username" placeholder="Enter yourname" name="name" [ngModel]="user.name">
-          </div>
-        <div class="mb-3 mt-3">
-          <label for="email" class="form-label">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"[ngModel]="user.email">
         </div>
-        <div class="mb-3">
-          <label for="pwd" class="form-label">Password:</label>
-          <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="password" [ngModel]="user.password">
-        </div>
-        <div class="form-check mb-3">
-          <label class="form-check-label">
-            <input class="form-check-input" type="checkbox" name="remember"> Remember me
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+    </form>
 </div>
-
-
-
-
-<app-header></app-header>
-<br>
-<br>
-<br>
-<input type="number" #table (keyup)="cal(table.value)">
-<p *ngFor="let a of arr">
-{{a}}
-</p>
-
-
-
-<!-- hotel booking -->
-
-<div class="hotel">
-    <label for="from">from</label>
-    <input type="date" id="from" #from>
-    <label for="to">to</label>
-    <input type="date" id="to" #to> 
-    <button (click)="cost(from.value,to.value)">calculate</button>
-    <!-- <table>
-        <tr>
-            <th>no.of.days</th>
-           <th>total cost per day(RS400/-)</th>
-        </tr>
-        <tr>
-            <td>{{ans}}</td>
-            <td>{{money}}</td>
-        </tr>
-    </table> -->
-</div>
-<app-reactiveform></app-reactiveform>
 <app-reactive-address-form></app-reactive-address-form>
